@@ -1,9 +1,8 @@
 name: Periodical URL health check
 
 on:
-    push:
-      branches:
-        - master
+    schedule:
+      - cron: "00 01 1 * *"
 jobs:
   health_check:
     runs-on: ubuntu-20.04
